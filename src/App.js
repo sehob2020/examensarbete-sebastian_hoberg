@@ -16,7 +16,6 @@ function App() {
 
     return (
         <Stack>
-          <Header />
             <Circle position="absolute" bg="blue.100" opacity="0.1"
                 w="300px" h="300px" alignSelf="flex-end" />
             <Flex direction={isNotSmallerScreen ? "row" : "column"}
@@ -36,7 +35,7 @@ function App() {
                     backgroundColor="transparent" boxShadow="lg"
                     boxSize="300px" src="https://talearnings.com/wp-content/uploads/2019/05/5438_-_Software_Developer-512.png" />
             </Flex>
-
+            <Header></Header>
         </Stack>
     )
 }
