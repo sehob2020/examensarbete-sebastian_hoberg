@@ -1,43 +1,34 @@
-import React from 'react';
-import { Button } from '@chakra-ui/button';
+import { IconButton } from '@chakra-ui/button';
 import { useColorMode } from '@chakra-ui/color-mode';
-import { Circle, Stack, Flex, Box, Text, } from '@chakra-ui/layout';
-import { Image } from '@chakra-ui/image';
-import { useMediaQuery } from '@chakra-ui/media-query';
-
+import { Flex, VStack, Heading, Spacer, UnorderedList, ListItem, HStack } from '@chakra-ui/layout';
+import { FaSun, FaMoon, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import Header from './components/Header';
+import Profile from './components/Profile';
+import Social from './components/Social';
 
 function App() {
 
-    const {colorMode} = useColorMode();
-    const isDark = colorMode === "dark";
+  const { colorMode, toggleColorMode } = useColorMode();
+  const isDark = colorMode === "dark";
 
-    const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
-
-    return (
-        <Stack>
-            <Circle position="absolute" bg="blue.100" opacity="0.1"
-                w="300px" h="300px" alignSelf="flex-end" />
-            <Flex direction={isNotSmallerScreen ? "row" : "column"}
-                spacing="200px" p={isNotSmallerScreen ? "32" : "0"} 
-                alignSelf="flex-start">
-                <Box mt={isNotSmallerScreen ? "0" : 16} align="flex-start">
-                    <Text fontSize="5xl" fontWeight="semibold">Hi, I am</Text>
-                    <Text fontSize="7xl" fontWeight="bold" bgGradient="linear(to-r, cyan.400, blue.500, purple.600)" bgClip="text" >Sebastian Hoberg</Text>
-                    <Text color={isDark ? "gray.200" : "gray.500"}>Studying front end developer.</Text>
-                    <Button mt={8} colorScheme="blue" onClick={() => 
-                    window.open("https://google.com")
-                }>Download CV</Button>
-
-                </Box>
-                <Image alignSelf="center" mt={isNotSmallerScreen ? "0" : "12"} 
-                    mb={isNotSmallerScreen ? "0" : "12"} borderRadius="full"
-                    backgroundColor="transparent" boxShadow="lg"
-                    boxSize="300px" src="https://talearnings.com/wp-content/uploads/2019/05/5438_-_Software_Developer-512.png" />
-            </Flex>
-            <Header></Header>
-        </Stack>
-    )
+  return (
+    <VStack p={5}>
+      <Flex w="100%" >
+        {/* <Heading ml="8" size="md" fontWeight="semibold" color="cyan.400">Web Development</Heading> */}
+        <Spacer></Spacer>
+            <HStack display="flex" flexDirection="row">
+                <UnorderedList listStyleType="none" display="flex" >
+                    <ListItem ml={2} w="129px" h="37px" borderRadius="50%" background="#232B3A" >Home</ListItem>
+                    <ListItem ml={2} w="129px" h="37px" borderRadius="50%" background="#232B3A" >About</ListItem>
+                    <IconButton ml={8} icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={toggleColorMode}></IconButton>
+                </UnorderedList>
+            </HStack>
+      </Flex>
+      <Header></Header>
+      <Social></Social>
+      <Profile></Profile>
+    </VStack>
+  );
 }
 
 export default App;
