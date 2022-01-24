@@ -15,9 +15,6 @@ function Profile() {
                 </Heading>
                 <Text fontSize="2xl" color="gray.400" w="250px">Years of Experience</Text>
             </Box>
-            <Box alignSelf="center" px="32" py="7">
-                <Text fontWeight="thin" fontSize="2xl" letterSpacing="10px">hoberg.sebastian@gmail.com</Text>
-            </Box>
         </Flex>
     )
 }
