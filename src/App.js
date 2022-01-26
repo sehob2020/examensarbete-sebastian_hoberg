@@ -1,9 +1,4 @@
-import { IconButton } from '@chakra-ui/button';
-import { useColorMode } from '@chakra-ui/color-mode';
-import { Flex, VStack, Heading, Spacer, UnorderedList, ListItem, HStack } from '@chakra-ui/layout';
-import { Button, ButtonGroup, Link } from '@chakra-ui/react'
-import { FaSun, FaMoon, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
-
+import { Flex, VStack } from '@chakra-ui/layout';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Nav from './components/Nav';
