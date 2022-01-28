@@ -3,25 +3,10 @@ import { Circle, Stack, Flex, Box, Text, Link } from '@chakra-ui/layout';
 import { useMediaQuery } from '@chakra-ui/media-query';
 import React from 'react';
 
-/* import cv from '../files/CVsehob.pdf'; */
-
-/* import FileSaver from 'file-saver'; */
-
-
-
 
 function Header() {
 
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
-
-    
-    /* const saveFile = () => {
-        FileSaver.saveAs(
-        process.env.REACT_APP_CLIENT_URL + "/resources/CVsehob.pdf",
-        "CVsehob.pdf"
-        );
-    }; */
-
 
     return (
         <Stack>
@@ -34,7 +19,6 @@ function Header() {
                     <Text fontSize="5xl" fontWeight="light">Hello world, I am</Text>
                     <Text fontSize="7xl" fontWeight="bold" bgGradient="linear(to-r, orange.400, pink.700, purple.600)" bgClip="text" >Sebastian Hoberg</Text>
                     <Text fontSize="5xl" bgGradient="linear(to-r, orange.400, pink.500, purple.600)" bgClip="text" letterSpacing="15px" >frontend developer</Text>
-
                     <Link mt={8} background="orange.500"  
                     href="CVsehob.pdf"
                     download
@@ -49,14 +33,12 @@ function Header() {
                     _hover={{
                     background: "orange.300"
                   }}>Download CV</Button></Link>
-
                 </Box>
                 <Circle alignSelf="center" mt={isNotSmallerScreen ? "0" : "12"} 
                     mb={isNotSmallerScreen ? "0" : "12"} borderRadius="full"
                     backgroundColor="transparent" boxShadow="2xl"
                     boxSize="300px"/>
             </Flex>
-
         </Stack>
     )
 }
