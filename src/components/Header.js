@@ -1,12 +1,27 @@
 import { Button } from '@chakra-ui/button';
-import { Circle, Stack, Flex, Box, Text, } from '@chakra-ui/layout';
+import { Circle, Stack, Flex, Box, Text, Link } from '@chakra-ui/layout';
 import { useMediaQuery } from '@chakra-ui/media-query';
 import React from 'react';
+
+/* import cv from '../files/CVsehob.pdf'; */
+
+/* import FileSaver from 'file-saver'; */
+
+
 
 
 function Header() {
 
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+
+    
+    /* const saveFile = () => {
+        FileSaver.saveAs(
+        process.env.REACT_APP_CLIENT_URL + "/resources/CVsehob.pdf",
+        "CVsehob.pdf"
+        );
+    }; */
+
 
     return (
         <Stack>
@@ -20,14 +35,20 @@ function Header() {
                     <Text fontSize="7xl" fontWeight="bold" bgGradient="linear(to-r, orange.400, pink.700, purple.600)" bgClip="text" >Sebastian Hoberg</Text>
                     <Text fontSize="5xl" bgGradient="linear(to-r, orange.400, pink.500, purple.600)" bgClip="text" letterSpacing="15px" >frontend developer</Text>
 
-                    {/* TODO: FIXA CV ISTÄLLET FÖR EN LÄNK TILL GOOGLE */}
-                    <Button mt={8} background="orange.500" 
-                    onClick={() => 
-                    window.open("https://google.com")
-                }  
+                    <Link mt={8} background="orange.500"  
+                    href="CVsehob.pdf"
+                    download
                     _hover={{
                     background: "orange.300",
-                  }}>Download CV</Button>
+                  }}>
+                    <Button 
+                    background="orange.500" 
+                    _active={{
+                        background: "orange.300"
+                    }}
+                    _hover={{
+                    background: "orange.300"
+                  }}>Download CV</Button></Link>
 
                 </Box>
                 <Circle alignSelf="center" mt={isNotSmallerScreen ? "0" : "12"} 

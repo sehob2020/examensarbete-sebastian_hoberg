@@ -1,8 +1,10 @@
 import { HStack, VStack, Text } from '@chakra-ui/layout'
 import { FaFacebookF, FaGoogle, FaGithub, FaLinkedin } from 'react-icons/fa'
 import React from 'react'
-import Icon from '@chakra-ui/icon'
+import { Icon } from '@chakra-ui/icon'
+
 import { useMediaQuery } from '@chakra-ui/media-query'
+
 
 function Social() {
 
@@ -12,10 +14,18 @@ function Social() {
         <VStack>
             <Text fontWeight="thin" fontSize="1xl" letterSpacing="5px" pb="9px">hoberg.sebastian@gmail.com</Text>
             <HStack spacing={isNotSmallerScreen ? "24" : "0"} flexDirection={isNotSmallerScreen ? "row" : "column"}>
-                <Icon as={FaLinkedin} boxSize="50" />
-                <Icon as={FaGithub} boxSize="50" />
-                <Icon as={FaFacebookF} boxSize="50" />
-                <Icon as={FaGoogle} boxSize="50" />
+                <Icon as={FaLinkedin} boxSize="50" cursor="pointer" onClick={() => 
+                    window.open("https://www.linkedin.com/in/sebastian-hoberg-ba2a77140/")
+                } />
+                <Icon as={FaGithub} boxSize="50" cursor="pointer" onClick={() => 
+                    window.open("https://github.com/sehob2020")
+                } />
+                <Icon as={FaFacebookF} boxSize="50" cursor="pointer" onClick={() => 
+                    window.open("https://www.facebook.com/sebastian.hoberg")
+                } />
+                <Icon as={FaGoogle} boxSize="50" cursor="pointer" onClick={() => 
+                    window.open("mailto:hoberg.sebastian@gmail.com")
+                } />
             </HStack>
         </VStack>
     )
