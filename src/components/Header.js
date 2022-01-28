@@ -3,6 +3,7 @@ import { Circle, Stack, Flex, Box, Text, } from '@chakra-ui/layout';
 import { useMediaQuery } from '@chakra-ui/media-query';
 import React from 'react';
 
+
 function Header() {
 
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
@@ -23,7 +24,8 @@ function Header() {
                     <Button mt={8} background="orange.500" 
                     onClick={() => 
                     window.open("https://google.com")
-                }  _hover={{
+                }  
+                    _hover={{
                     background: "orange.300",
                   }}>Download CV</Button>
 
