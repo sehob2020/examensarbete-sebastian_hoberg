@@ -12,13 +12,13 @@ function Nav() {
 
   return (
     <VStack w="full" h="full">
-      <Flex  w="100%" >
-        <Spacer></Spacer>
-            <HStack  as="nav">
-                    <Button as={ReachLink} to="/">Home</Button>
-                    <Button as={ReachLink} to="/about">About</Button>
+      <Flex  w="100%">
+        <Spacer />
+          <HStack as="nav" >
+              <Button as={ReachLink} to="/">Home</Button>
+              <Button as={ReachLink} to="/about">About</Button>
               <IconButton ml={8} icon={isDark ? <FaSun /> : <FaMoon />} isRound="true" onClick={toggleColorMode}></IconButton>
-            </HStack>
+          </HStack>
       </Flex>
     </VStack>
   );

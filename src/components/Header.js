@@ -3,7 +3,6 @@ import { Circle, Stack, Flex, Box, Text, Link } from '@chakra-ui/layout';
 import { useMediaQuery } from '@chakra-ui/media-query';
 import React from 'react';
 
-
 function Header() {
 
     const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");

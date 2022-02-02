@@ -2,9 +2,7 @@ import { HStack, VStack, Text } from '@chakra-ui/layout'
 import { FaFacebookF, FaGoogle, FaGithub, FaLinkedin } from 'react-icons/fa'
 import React from 'react'
 import { Icon } from '@chakra-ui/icon'
-
 import { useMediaQuery } from '@chakra-ui/media-query'
-
 
 function Social() {
 
@@ -13,7 +11,7 @@ function Social() {
     return (
         <VStack>
             <Text fontWeight="thin" fontSize="1xl" letterSpacing="5px" pb="9px">hoberg.sebastian@gmail.com</Text>
-            <HStack spacing={isNotSmallerScreen ? "24" : "0"} flexDirection={isNotSmallerScreen ? "row" : "column"}>
+            <HStack spacing={isNotSmallerScreen ? "24" : "20"}>
                 <Icon as={FaLinkedin} boxSize="50" cursor="pointer" onClick={() => 
                     window.open("https://www.linkedin.com/in/sebastian-hoberg-ba2a77140/")
                 } />

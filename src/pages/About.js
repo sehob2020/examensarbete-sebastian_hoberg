@@ -13,8 +13,8 @@ function About() {
   return (
     <VStack display="flex" alignItems="center" justifyContent="center" h="full" w="100%">
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-        <Text display="flex" alignItems="center" justifyContent="center" pb="20px" letterSpacing="5px">Frontend Developer - EC Utbildning Helsingborg 2020 / 2022</Text>
-        <HStack display="flex" w="100%" flexDirection={isNotSmallerScreen ? "row" : "column"} spacing={isNotSmallerScreen ? "24" : "0"} >
+        <Text display="flex" alignItems="center" justifyContent="center" pb="20px" letterSpacing={isNotSmallerScreen ? "5px" : "2px"}>Frontend Developer - EC Utbildning Helsingborg 2020 / 2022</Text>
+        <HStack display="flex" w="100%" spacing={isNotSmallerScreen ? "24" : "0"} justifyContent={isNotSmallerScreen ? "flex-start" : "space-between"}>
           <Icon as={FaHtml5} boxSize="50"/>
           <Icon as={FaCss3} boxSize="50"/>
           <Icon as={FaJs} boxSize="50"/>
