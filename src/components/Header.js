@@ -21,7 +21,7 @@ function Header() {
                     <Text fontSize="7xl" fontWeight="bold" bgGradient="linear(to-r, orange.400, pink.700, purple.600)" bgClip="text" >Sebastian Hoberg</Text>
                     <Text fontSize="5xl" bgGradient="linear(to-r, orange.400, pink.500, purple.600)" bgClip="text" letterSpacing="15px" >frontend developer</Text>
                     <Link mt={8} background="orange.500"  
-                    href="CVsehob.pdf"
+                    href="cv-sebastian.pdf"
                     download
                     _hover={{
                     background: "orange.300",
